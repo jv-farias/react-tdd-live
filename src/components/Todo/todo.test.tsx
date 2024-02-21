@@ -10,9 +10,7 @@ describe("Todo", () => {
 
     it("should show task input", () => {
         render(<Todos />);
-        
         const input = screen.getByPlaceholderText("Adicione uma nova tarefa");
-
         expect(input).toBeInTheDocument();
         expect(input).toHaveStyle({padding: "1px"})
     });
@@ -46,8 +44,8 @@ describe("Todo", () => {
 
         await userEvent.click(addButton)
 
-        // deletar tarefa adicionada
 
+        // deletar tarefa adicionada
         const deleteButton = screen.getByLabelText(`Deletar tarefa ${taskTitle}`)
         await userEvent.click(deleteButton)
         const deletedTask = screen.queryByText(taskTitle)
