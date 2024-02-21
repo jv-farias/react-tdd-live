@@ -1,5 +1,5 @@
+/** @type {import('ts-jest').JestConfigWithTsJest} */
 export default {
-  clearMocks: true,
-  testEnvironment: "jsdom",
-  setupFilesAfterEnv: ["<rootDir>/src/setupTests.ts"],
+  preset: 'ts-jest',
+  testEnvironment: 'jsdom',
 };
